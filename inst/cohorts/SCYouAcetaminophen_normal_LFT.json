@@ -14,27 +14,6 @@
         "isExcluded": false,
         "concept": {
           "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 1177480,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "5640",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "ibuprofen",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": ""
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "Drug",
-      "id": 2
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
           "CONCEPT_ID": 3013721,
           "STANDARD_CONCEPT": "S",
           "CONCEPT_CODE": "1920-8",
@@ -113,6 +92,27 @@
       }]},
       "name": "ALP",
       "id": 6
+    },
+    {
+      "expression": {"items": [{
+        "isExcluded": false,
+        "concept": {
+          "INVALID_REASON_CAPTION": "Unknown",
+          "CONCEPT_ID": 1125315,
+          "STANDARD_CONCEPT": "S",
+          "CONCEPT_CODE": "161",
+          "VOCABULARY_ID": "RxNorm",
+          "CONCEPT_NAME": "acetaminophen",
+          "DOMAIN_ID": "Drug",
+          "STANDARD_CONCEPT_CAPTION": "Standard",
+          "CONCEPT_CLASS_ID": "Ingredient",
+          "INVALID_REASON": ""
+        },
+        "includeMapped": false,
+        "includeDescendants": false
+      }]},
+      "name": "acetaminophen",
+      "id": 7
     }
   ],
   "EndStrategy": {"DateOffset": {
@@ -131,7 +131,7 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
@@ -168,7 +168,7 @@
               "Type": 2,
               "CountColumn": null,
               "IsDistinct": false,
-              "Count": 2
+              "Count": 1
             }
           },
           {
@@ -176,7 +176,7 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
@@ -213,7 +213,7 @@
               "Type": 2,
               "CountColumn": null,
               "IsDistinct": false,
-              "Count": 2
+              "Count": 1
             }
           },
           {
@@ -221,11 +221,11 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
-                "Days": null,
+                "Days": 0,
                 "Coeff": 1
               },
               "UseIndexEnd": false
@@ -258,7 +258,7 @@
               "Type": 2,
               "CountColumn": null,
               "IsDistinct": false,
-              "Count": 2
+              "Count": 1
             }
           },
           {
@@ -266,7 +266,7 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
@@ -303,7 +303,7 @@
               "Type": 2,
               "CountColumn": null,
               "IsDistinct": false,
-              "Count": 2
+              "Count": 1
             }
           }
         ],
@@ -323,7 +323,7 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
@@ -372,7 +372,7 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
@@ -421,7 +421,7 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
@@ -470,7 +470,7 @@
             "StartWindow": {
               "UseEventEnd": false,
               "Start": {
-                "Days": 180,
+                "Days": 60,
                 "Coeff": -1
               },
               "End": {
@@ -531,7 +531,7 @@
       "OccurrenceCount": null,
       "AgeAtStart": null,
       "GapDays": null,
-      "CodesetId": 2,
+      "CodesetId": 7,
       "AgeAtEnd": null,
       "First": true,
       "Gender": null,
@@ -541,7 +541,7 @@
     "PrimaryCriteriaLimit": {"Type": "All"},
     "ObservationWindow": {
       "PostDays": 0,
-      "PriorDays": 180
+      "PriorDays": 60
     }
   }
 }

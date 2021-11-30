@@ -6,7 +6,7 @@
   "skeletonType": "PatientLevelPredictionStudy",
   "populationSettings": [
     {
-      "minTimeAtRisk": 0,
+      "minTimeAtRisk": 6,
       "requireTimeAtRisk": true,
       "addExposureDaysToStart": false,
       "riskWindowStart": 1,
@@ -21,7 +21,7 @@
       "firstExposureOnly": false
     },
     {
-      "minTimeAtRisk": 0,
+      "minTimeAtRisk": 29,
       "requireTimeAtRisk": true,
       "addExposureDaysToStart": false,
       "riskWindowStart": 1,
@@ -34,12 +34,27 @@
       "removeSubjectsWithPriorOutcome": true,
       "riskWindowEnd": 30,
       "firstExposureOnly": false
+    },
+    {
+      "minTimeAtRisk": 59,
+      "requireTimeAtRisk": true,
+      "addExposureDaysToStart": false,
+      "riskWindowStart": 1,
+      "washoutPeriod": 180,
+      "attr_class": "populationSettings",
+      "addExposureDaysToEnd": false,
+      "includeAllOutcomes": false,
+      "priorOutcomeLookback": 180,
+      "binary": true,
+      "removeSubjectsWithPriorOutcome": true,
+      "riskWindowEnd": 60,
+      "firstExposureOnly": false
     }
   ],
   "organizationName": "yonsei",
   "targetIds": [
-    55,
-    57
+    63,
+    64
   ],
   "runPlpArgs": {
     "nfold": 5,
@@ -68,71 +83,27 @@
           "StartDate": null,
           "EndDate": null
         },
-        "ConceptSets": [
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3016723,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "2160-0",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Creatinine [Mass/volume] in Serum or Plasma",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": null
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "serum creatinine",
-            "id": 0
-          },
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3029859,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "50210-4",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Cystatin-based formula",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": null
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "eGFR",
-            "id": 1
-          },
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 40163615,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "233698",
-                "VOCABULARY_ID": "RxNorm",
-                "CONCEPT_NAME": "dronedarone",
-                "DOMAIN_ID": "Drug",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Ingredient",
-                "INVALID_REASON": null
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "Drug",
-            "id": 2
-          }
-        ],
+        "ConceptSets": [{
+          "expression": {"items": [{
+            "isExcluded": false,
+            "concept": {
+              "INVALID_REASON_CAPTION": "Unknown",
+              "CONCEPT_ID": 3016723,
+              "STANDARD_CONCEPT": "S",
+              "CONCEPT_CODE": "2160-0",
+              "VOCABULARY_ID": "LOINC",
+              "CONCEPT_NAME": "Creatinine [Mass/volume] in Serum or Plasma",
+              "DOMAIN_ID": "Measurement",
+              "STANDARD_CONCEPT_CAPTION": "Standard",
+              "CONCEPT_CLASS_ID": "Lab Test",
+              "INVALID_REASON": null
+            },
+            "includeMapped": false,
+            "includeDescendants": false
+          }]},
+          "name": "serum creatinine",
+          "id": 0
+        }],
         "EndStrategy": {"DateOffset": {
           "DateField": "StartDate",
           "Offset": 7
@@ -196,27 +167,6 @@
           "EndDate": null
         },
         "ConceptSets": [
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 1177480,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "5640",
-                "VOCABULARY_ID": "RxNorm",
-                "CONCEPT_NAME": "ibuprofen",
-                "DOMAIN_ID": "Drug",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Ingredient",
-                "INVALID_REASON": ""
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "Drug",
-            "id": 2
-          },
           {
             "expression": {"items": [{
               "isExcluded": false,
@@ -523,32 +473,11 @@
               "isExcluded": false,
               "concept": {
                 "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 3029859,
+                "CONCEPT_ID": 1125315,
                 "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "50210-4",
-                "VOCABULARY_ID": "LOINC",
-                "CONCEPT_NAME": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Cystatin-based formula",
-                "DOMAIN_ID": "Measurement",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Lab Test",
-                "INVALID_REASON": null
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "eGFR",
-            "id": 1
-          },
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 1177480,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "5640",
+                "CONCEPT_CODE": "161",
                 "VOCABULARY_ID": "RxNorm",
-                "CONCEPT_NAME": "ibuprofen",
+                "CONCEPT_NAME": "acetaminophen",
                 "DOMAIN_ID": "Drug",
                 "STANDARD_CONCEPT_CAPTION": "Standard",
                 "CONCEPT_CLASS_ID": "Ingredient",
@@ -557,8 +486,8 @@
               "includeMapped": false,
               "includeDescendants": false
             }]},
-            "name": "Drug",
-            "id": 2
+            "name": "acetaminophen",
+            "id": 3
           }
         ],
         "EndStrategy": {"DateOffset": {
@@ -576,7 +505,7 @@
                 "StartWindow": {
                   "UseEventEnd": false,
                   "Start": {
-                    "Days": 180,
+                    "Days": 60,
                     "Coeff": -1
                   },
                   "End": {
@@ -613,7 +542,7 @@
                   "Type": 2,
                   "CountColumn": null,
                   "IsDistinct": false,
-                  "Count": 2
+                  "Count": 1
                 }
               }],
               "Type": "ALL",
@@ -631,7 +560,7 @@
                 "StartWindow": {
                   "UseEventEnd": false,
                   "Start": {
-                    "Days": 30,
+                    "Days": 60,
                     "Coeff": -1
                   },
                   "End": {
@@ -691,7 +620,7 @@
             "OccurrenceCount": null,
             "AgeAtStart": null,
             "GapDays": null,
-            "CodesetId": 2,
+            "CodesetId": 3,
             "AgeAtEnd": null,
             "First": null,
             "Gender": null,
@@ -701,18 +630,18 @@
           "PrimaryCriteriaLimit": {"Type": "All"},
           "ObservationWindow": {
             "PostDays": 0,
-            "PriorDays": 180
+            "PriorDays": 60
           }
         }
       },
       "createdDate": null,
       "createdBy": null,
-      "name": "[SCYou]Ibuprofen_normal_Cr",
+      "name": "[SCYou]IAcetaminophen_normal_Cr",
       "modifiedDate": null,
       "description": null,
       "expressionType": "SIMPLE_EXPRESSION",
       "modifiedBy": null,
-      "id": 55
+      "id": 63
     },
     {
       "expression": {
@@ -726,27 +655,6 @@
           "EndDate": null
         },
         "ConceptSets": [
-          {
-            "expression": {"items": [{
-              "isExcluded": false,
-              "concept": {
-                "INVALID_REASON_CAPTION": "Unknown",
-                "CONCEPT_ID": 1177480,
-                "STANDARD_CONCEPT": "S",
-                "CONCEPT_CODE": "5640",
-                "VOCABULARY_ID": "RxNorm",
-                "CONCEPT_NAME": "ibuprofen",
-                "DOMAIN_ID": "Drug",
-                "STANDARD_CONCEPT_CAPTION": "Standard",
-                "CONCEPT_CLASS_ID": "Ingredient",
-                "INVALID_REASON": ""
-              },
-              "includeMapped": false,
-              "includeDescendants": false
-            }]},
-            "name": "Drug",
-            "id": 2
-          },
           {
             "expression": {"items": [{
               "isExcluded": false,
@@ -830,6 +738,27 @@
             }]},
             "name": "ALP",
             "id": 6
+          },
+          {
+            "expression": {"items": [{
+              "isExcluded": false,
+              "concept": {
+                "INVALID_REASON_CAPTION": "Unknown",
+                "CONCEPT_ID": 1125315,
+                "STANDARD_CONCEPT": "S",
+                "CONCEPT_CODE": "161",
+                "VOCABULARY_ID": "RxNorm",
+                "CONCEPT_NAME": "acetaminophen",
+                "DOMAIN_ID": "Drug",
+                "STANDARD_CONCEPT_CAPTION": "Standard",
+                "CONCEPT_CLASS_ID": "Ingredient",
+                "INVALID_REASON": ""
+              },
+              "includeMapped": false,
+              "includeDescendants": false
+            }]},
+            "name": "acetaminophen",
+            "id": 7
           }
         ],
         "EndStrategy": {"DateOffset": {
@@ -848,7 +777,7 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
@@ -885,7 +814,7 @@
                     "Type": 2,
                     "CountColumn": null,
                     "IsDistinct": false,
-                    "Count": 2
+                    "Count": 1
                   }
                 },
                 {
@@ -893,7 +822,7 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
@@ -930,7 +859,7 @@
                     "Type": 2,
                     "CountColumn": null,
                     "IsDistinct": false,
-                    "Count": 2
+                    "Count": 1
                   }
                 },
                 {
@@ -938,11 +867,11 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
-                      "Days": null,
+                      "Days": 0,
                       "Coeff": 1
                     },
                     "UseIndexEnd": false
@@ -975,7 +904,7 @@
                     "Type": 2,
                     "CountColumn": null,
                     "IsDistinct": false,
-                    "Count": 2
+                    "Count": 1
                   }
                 },
                 {
@@ -983,7 +912,7 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
@@ -1020,7 +949,7 @@
                     "Type": 2,
                     "CountColumn": null,
                     "IsDistinct": false,
-                    "Count": 2
+                    "Count": 1
                   }
                 }
               ],
@@ -1040,7 +969,7 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
@@ -1089,7 +1018,7 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
@@ -1138,7 +1067,7 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
@@ -1187,7 +1116,7 @@
                   "StartWindow": {
                     "UseEventEnd": false,
                     "Start": {
-                      "Days": 180,
+                      "Days": 60,
                       "Coeff": -1
                     },
                     "End": {
@@ -1248,7 +1177,7 @@
             "OccurrenceCount": null,
             "AgeAtStart": null,
             "GapDays": null,
-            "CodesetId": 2,
+            "CodesetId": 7,
             "AgeAtEnd": null,
             "First": true,
             "Gender": null,
@@ -1258,44 +1187,24 @@
           "PrimaryCriteriaLimit": {"Type": "All"},
           "ObservationWindow": {
             "PostDays": 0,
-            "PriorDays": 180
+            "PriorDays": 60
           }
         }
       },
       "createdDate": null,
       "createdBy": null,
-      "name": "[SCYou]Ibuprofen_normal_LFT",
+      "name": "[SCYou]Acetaminophen_normal_LFT",
       "modifiedDate": null,
       "description": null,
       "expressionType": "SIMPLE_EXPRESSION",
       "modifiedBy": null,
-      "id": 57
+      "id": 64
     }
   ],
-  "modelSettings": [
-    {"LassoLogisticRegressionSettings": {
-      "seed": null,
-      "variance": 0.01
-    }},
-    {"GradientBoostingMachineSettings": {
-      "maxDepth": [
-        4,
-        6,
-        17
-      ],
-      "minRows": [20],
-      "seed": null,
-      "nthread": 20,
-      "ntrees": [
-        10,
-        100
-      ],
-      "learnRate": [
-        0.01,
-        0.1
-      ]
-    }}
-  ],
+  "modelSettings": [{"LassoLogisticRegressionSettings": {
+    "seed": null,
+    "variance": 0.01
+  }}],
   "name": "Prediction of AKI among patients using ibuprofen",
   "covariateSettings": [{
     "VisitCountMediumTerm": false,

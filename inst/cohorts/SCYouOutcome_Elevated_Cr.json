@@ -8,71 +8,27 @@
     "StartDate": null,
     "EndDate": null
   },
-  "ConceptSets": [
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 3016723,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "2160-0",
-          "VOCABULARY_ID": "LOINC",
-          "CONCEPT_NAME": "Creatinine [Mass/volume] in Serum or Plasma",
-          "DOMAIN_ID": "Measurement",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Lab Test",
-          "INVALID_REASON": null
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "serum creatinine",
-      "id": 0
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 3029859,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "50210-4",
-          "VOCABULARY_ID": "LOINC",
-          "CONCEPT_NAME": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Cystatin-based formula",
-          "DOMAIN_ID": "Measurement",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Lab Test",
-          "INVALID_REASON": null
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "eGFR",
-      "id": 1
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 40163615,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "233698",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "dronedarone",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": null
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "Drug",
-      "id": 2
-    }
-  ],
+  "ConceptSets": [{
+    "expression": {"items": [{
+      "isExcluded": false,
+      "concept": {
+        "INVALID_REASON_CAPTION": "Unknown",
+        "CONCEPT_ID": 3016723,
+        "STANDARD_CONCEPT": "S",
+        "CONCEPT_CODE": "2160-0",
+        "VOCABULARY_ID": "LOINC",
+        "CONCEPT_NAME": "Creatinine [Mass/volume] in Serum or Plasma",
+        "DOMAIN_ID": "Measurement",
+        "STANDARD_CONCEPT_CAPTION": "Standard",
+        "CONCEPT_CLASS_ID": "Lab Test",
+        "INVALID_REASON": null
+      },
+      "includeMapped": false,
+      "includeDescendants": false
+    }]},
+    "name": "serum creatinine",
+    "id": 0
+  }],
   "EndStrategy": {"DateOffset": {
     "DateField": "StartDate",
     "Offset": 7

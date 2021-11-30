@@ -35,32 +35,11 @@
         "isExcluded": false,
         "concept": {
           "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 3029859,
+          "CONCEPT_ID": 1125315,
           "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "50210-4",
-          "VOCABULARY_ID": "LOINC",
-          "CONCEPT_NAME": "Glomerular filtration rate/1.73 sq M.predicted [Volume Rate/Area] in Serum, Plasma or Blood by Cystatin-based formula",
-          "DOMAIN_ID": "Measurement",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Lab Test",
-          "INVALID_REASON": null
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "eGFR",
-      "id": 1
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 1177480,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "5640",
+          "CONCEPT_CODE": "161",
           "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "ibuprofen",
+          "CONCEPT_NAME": "acetaminophen",
           "DOMAIN_ID": "Drug",
           "STANDARD_CONCEPT_CAPTION": "Standard",
           "CONCEPT_CLASS_ID": "Ingredient",
@@ -69,8 +48,8 @@
         "includeMapped": false,
         "includeDescendants": false
       }]},
-      "name": "Drug",
-      "id": 2
+      "name": "acetaminophen",
+      "id": 3
     }
   ],
   "EndStrategy": {"DateOffset": {
@@ -88,7 +67,7 @@
           "StartWindow": {
             "UseEventEnd": false,
             "Start": {
-              "Days": 180,
+              "Days": 60,
               "Coeff": -1
             },
             "End": {
@@ -125,7 +104,7 @@
             "Type": 2,
             "CountColumn": null,
             "IsDistinct": false,
-            "Count": 2
+            "Count": 1
           }
         }],
         "Type": "ALL",
@@ -143,7 +122,7 @@
           "StartWindow": {
             "UseEventEnd": false,
             "Start": {
-              "Days": 30,
+              "Days": 60,
               "Coeff": -1
             },
             "End": {
@@ -203,7 +182,7 @@
       "OccurrenceCount": null,
       "AgeAtStart": null,
       "GapDays": null,
-      "CodesetId": 2,
+      "CodesetId": 3,
       "AgeAtEnd": null,
       "First": null,
       "Gender": null,
@@ -213,7 +192,7 @@
     "PrimaryCriteriaLimit": {"Type": "All"},
     "ObservationWindow": {
       "PostDays": 0,
-      "PriorDays": 180
+      "PriorDays": 60
     }
   }
 }

@@ -14,27 +14,6 @@
         "isExcluded": false,
         "concept": {
           "INVALID_REASON_CAPTION": "Unknown",
-          "CONCEPT_ID": 1177480,
-          "STANDARD_CONCEPT": "S",
-          "CONCEPT_CODE": "5640",
-          "VOCABULARY_ID": "RxNorm",
-          "CONCEPT_NAME": "ibuprofen",
-          "DOMAIN_ID": "Drug",
-          "STANDARD_CONCEPT_CAPTION": "Standard",
-          "CONCEPT_CLASS_ID": "Ingredient",
-          "INVALID_REASON": ""
-        },
-        "includeMapped": false,
-        "includeDescendants": false
-      }]},
-      "name": "Drug",
-      "id": 2
-    },
-    {
-      "expression": {"items": [{
-        "isExcluded": false,
-        "concept": {
-          "INVALID_REASON_CAPTION": "Unknown",
           "CONCEPT_ID": 3013721,
           "STANDARD_CONCEPT": "S",
           "CONCEPT_CODE": "1920-8",
